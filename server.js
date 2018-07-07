@@ -1,12 +1,23 @@
 const express = require('express')
+const cors = require('cors')
+const bodyParser = require('body-parser')
+
 const app = express()
-
 const shops = require('./shops.json')
-
 const cfg = {
   port: process.env.PORT || 3000
 }
 
+// CORS
+app.use(cors())
+
+// JSON
+app.use(bodyParser.json())
+
+// URLENCODED
+app.use(bodyParser.urlencoded({ extended: false }))
+
+// CUSTOM RESPONSES
 app.use((req, res, next) => {
   res.responseWithError = (error, data) => {
     return res.json({status: 'error', error: error, data: data})
