@@ -25,7 +25,7 @@
           "name": "Test 2 coffee 1"
         },
         {
-          "id": "e631ed61-edf8-4081-a1a8-4823a85788d4",
+          "id": "16fbebf9-4611-4351-8b9e-60d38b21a251",
           "name": "Test 2 coffee 2"
         }
       ]
@@ -37,11 +37,11 @@
     "menu": {
       "products": [
         {
-          "id": "e631ed61-edf8-4081-a1a8-4823a85788d4",
+          "id": "06d433fe-bb7b-4fed-9bda-5009c0773705",
           "name": "Test 3 coffee 1"
         },
         {
-          "id": "e631ed61-edf8-4081-a1a8-4823a85788d4",
+          "id": "0c59baaa-76cc-40d9-b281-acf892a3ef6d",
           "name": "Test 3 coffee 2"
         }
       ]
