@@ -30,7 +30,7 @@ app.use((req, res, next) => {
   next()
 });
 
-// respond with "hello world" when a GET request is made to the homepage
+// ROUTES
 app.get('/', (req, res) => {
   res.responseWithData()
 })
@@ -42,7 +42,9 @@ app.get('/shops', (req, res) => {
 app.post('/order', (req, res) => {
   const { shopId, productId} = req.body;
 
+  console.log(req.body);
   console.log(shopId, productId);
+  res.responseWithData(req.body);
 })
 
 // Start Server

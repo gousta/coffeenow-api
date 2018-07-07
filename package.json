@@ -9,6 +9,7 @@
     "express": "^4.16.3"
   },
   "scripts": {
+    "start": "nodemon server.js",
     "deploy": "git push heroku master"
   }
 }

@@ -7,6 +7,42 @@
         {
           "id": "97a9ddac-de58-4d8a-b52d-78b70f58b72e",
           "name": "Freddo Espresso"
+        },
+        {
+          "id": "3fb34fa0-bece-45b7-b98d-5488993a0abd",
+          "name": "Freddo Cappuccino"
+        }
+      ]
+    }
+  },
+  {
+    "id": "c288ceaf-1d8e-4eac-8088-56bd69e596a2",
+    "name": "Test 2",
+    "menu": {
+      "products": [
+        {
+          "id": "e631ed61-edf8-4081-a1a8-4823a85788d4",
+          "name": "Test 2 coffee 1"
+        },
+        {
+          "id": "e631ed61-edf8-4081-a1a8-4823a85788d4",
+          "name": "Test 2 coffee 2"
+        }
+      ]
+    }
+  },
+  {
+    "id": "c288ceaf-1d8e-4eac-8088-56bd69e596a2",
+    "name": "Test 3",
+    "menu": {
+      "products": [
+        {
+          "id": "e631ed61-edf8-4081-a1a8-4823a85788d4",
+          "name": "Test 3 coffee 1"
+        },
+        {
+          "id": "e631ed61-edf8-4081-a1a8-4823a85788d4",
+          "name": "Test 3 coffee 2"
         }
       ]
     }
