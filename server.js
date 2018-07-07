@@ -64,10 +64,10 @@ app.post('/order', (req, res) => {
 mongoose
   .connect(cfg.mongo.url, cfg.mongo.options)
   .then(() => {
-    console.info(`[MONGODB][CONNECT][OK] @ ${cfg.mongo.url}`)
+    console.info(`[MONGODB][OK] @ ${cfg.mongo.url}`)
   })
   .catch((err) => {
-    console.error('[MONGODB][CONNECT][ERROR] @ ', err.message)
+    console.error('[MONGODB][ERROR] @ ', err.message)
   })
 
 // Start Server
