@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const express = require('express')
 const cors = require('cors')
 const bodyParser = require('body-parser')
@@ -7,7 +9,10 @@ const app = express()
 const shops = require('./shops.json')
 const cfg = {
   port: process.env.PORT || 3000,
-  mongoDBConnectionString: process.env.MONGODB_URI || ''
+  mongo: {
+    url: process.env.MONGODB_URI || '',
+    options: { useNewUrlParser: true }
+  }
 }
 
 // CORS
@@ -32,6 +37,7 @@ app.use((req, res, next) => {
   next()
 });
 
+// MIDDLEWARE
 app.use((req, res, next) => {
   console.info(`[HTTP][${req.method}] ${req.originalUrl}`)
   next()
@@ -56,9 +62,9 @@ app.post('/order', (req, res) => {
 
 // MONGO
 mongoose
-  .connect(cfg.mongoDBConnectionString)
+  .connect(cfg.mongo.url, cfg.mongo.options)
   .then(() => {
-    console.info(`[MONGODB][CONNECT][OK] @ ${cfg.mongoDBConnectionString}`)
+    console.info(`[MONGODB][CONNECT][OK] @ ${cfg.mongo.url}`)
   })
   .catch((err) => {
     console.error('[MONGODB][CONNECT][ERROR] @ ', err.message)
